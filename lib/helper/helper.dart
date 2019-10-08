@@ -14,22 +14,16 @@ Future<Widget> getCardBin(String cardNumber) async {
       final dynamic result = await http.read('https://binlist.io/lookup/' +
           cardNumber.replaceAll(RegExp(r'\s+\b|\b\s'), ''));
 
-      print(jsonDecode(result)['scheme']);
-
       if (flags[jsonDecode(result)['scheme']] != null) {
         return flags[jsonDecode(result)['scheme']];
       } else {
         return Container();
       }
-    } catch (e) {
-      print(e);
-      print('did not find the card flag');
-    }
+    } catch (e) {}
   } else {
-    print('Find but not all');
     return Container();
   }
-  print('Dont find');
+
   return Container();
 }
 
