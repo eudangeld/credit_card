@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 import 'package:credit_card/style/styles.dart';
@@ -13,7 +14,6 @@ class CardModel {
     this.backCardColor,
     this.numberMask = '0000 0000 0000 0000',
     this.cvvMask = '0000',
-    this.nameMask = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
     this.expiryMask = '00/00',
     this.numberDefaultLabel,
     this.nameDefaultLabel,
@@ -21,7 +21,7 @@ class CardModel {
   }) {
     numberController = MaskedTextController(mask: numberMask);
     cvvController = MaskedTextController(mask: cvvMask);
-    nameController = MaskedTextController(mask: nameMask);
+    nameController = TextEditingController();
     expiryController = MaskedTextController(mask: expiryMask);
 
     animeDuration = animationDuration(animeDuration);
@@ -39,7 +39,7 @@ class CardModel {
 
   MaskedTextController numberController;
   MaskedTextController cvvController;
-  MaskedTextController nameController;
+  TextEditingController nameController;
   MaskedTextController expiryController;
   String numberDefaultLabel;
   String nameDefaultLabel;
@@ -50,7 +50,6 @@ class CardModel {
   Duration animeDuration;
   final String numberMask;
   final String cvvMask;
-  final String nameMask;
   final String expiryMask;
   final double height;
   final double width;
