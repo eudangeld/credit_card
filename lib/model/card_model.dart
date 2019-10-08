@@ -29,7 +29,7 @@ class CardModel {
     expiryDefaultLabel = expiryLabel(expiryDefaultLabel);
     nameDefaultLabel = nameLabel(nameDefaultLabel);
 
-    controllers = <MaskedTextController>[
+    controllers = <TextEditingController>[
       numberController,
       cvvController,
       nameController,
@@ -45,7 +45,7 @@ class CardModel {
   String nameDefaultLabel;
   String expiryDefaultLabel;
 
-  List<MaskedTextController> controllers;
+  List<TextEditingController> controllers;
 
   Duration animeDuration;
   final String numberMask;
