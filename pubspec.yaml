@@ -1,0 +1,39 @@
+name: credit_card
+description: A Credit Card with card flip animation
+version: 0.0.1
+author: eudangeld@gmail.com
+homepage: https://github.com/eudangeld/credit_card
+issue_tracker : https://github.com/eudangeld/credit_card/issues
+
+
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_masked_text: ^0.8.0  
+  http: ^0.12.0+2
+  flutter_svg: 0.14.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  assets:
+   - packages/credit_card/assets/amex.svg
+   - packages/credit_card/assets/aura.svg
+   - packages/credit_card/assets/diners.svg
+   - packages/credit_card/assets/elo.svg
+   - packages/credit_card/assets/hipercard.svg
+   - packages/credit_card/assets/jcb.svg
+   - packages/credit_card/assets/master.svg
+   - packages/credit_card/assets/visa.svg
+
+  fonts:
+    - family: DroidSansMono
+      fonts:
+        - asset: font/DroidSansMono.ttf
