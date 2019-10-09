@@ -7,7 +7,10 @@ class CardModel {
   CardModel({
     this.height,
     this.width,
-    this.frontTextStyle,
+    this.cardNumberStyle,
+    this.cvvTextStyle,
+    this.expiryStyle,
+    this.holderNameStyle,
     this.backTextStyle,
     this.animeDuration,
     this.frontCardColor,
@@ -53,8 +56,11 @@ class CardModel {
   final String expiryMask;
   final double height;
   final double width;
-  final TextStyle frontTextStyle;
+  final TextStyle cardNumberStyle;
+  final TextStyle holderNameStyle;
   final TextStyle backTextStyle;
+  final TextStyle cvvTextStyle;
+  final TextStyle expiryStyle;
   final Color frontCardColor;
   final Color backCardColor;
 }

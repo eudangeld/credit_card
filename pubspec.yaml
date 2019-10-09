@@ -32,6 +32,7 @@ flutter:
    - packages/credit_card/assets/jcb.svg
    - packages/credit_card/assets/master.svg
    - packages/credit_card/assets/visa.svg
+   - packages/credit_card/assets/mcard.svg
 
   fonts:
     - family: DroidSansMono

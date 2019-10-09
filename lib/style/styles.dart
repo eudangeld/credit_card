@@ -1,7 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-TextStyle textStyle(TextStyle style) => style != null ? style : textCardStyle;
 Duration animationDuration(Duration duration) =>
     duration != null ? duration : Duration(milliseconds: 500);
 
@@ -10,9 +9,37 @@ String numberLabel(String label) =>
     label != null ? label : '0000 0000 0000 0000';
 String expiryLabel(String label) => label != null ? label : 'MM/AA';
 
-TextStyle textCardStyle = TextStyle(
-  color: Colors.white,
-  fontSize: 16,
+Color _textGray = const Color(0xFFD1D3D4);
+
+TextStyle cardNumberStyle = TextStyle(
+  color: _textGray,
+  letterSpacing: 1.6,
+  fontSize: 22,
+  fontWeight: FontWeight.bold,
+  fontFamily: 'DroidSansMono',
+  package: 'credit_card',
+);
+TextStyle holderNameStyle = TextStyle(
+  color: _textGray,
+  // letterSpacing: 1.6,
+  fontSize: 17,
+  fontWeight: FontWeight.bold,
+  fontFamily: 'DroidSansMono',
+  package: 'credit_card',
+);
+TextStyle expiryStyle = TextStyle(
+  color: _textGray,
+  // letterSpacing: 1.6,
+  fontSize: 18,
+  fontWeight: FontWeight.bold,
+  fontFamily: 'DroidSansMono',
+  package: 'credit_card',
+);
+TextStyle cvvTextStyle = TextStyle(
+  color: Colors.black,
+  // letterSpacing: 1.6,
+  fontSize: 18,
+  fontWeight: FontWeight.bold,
   fontFamily: 'DroidSansMono',
   package: 'credit_card',
 );
@@ -25,12 +52,12 @@ LinearGradient cardGradient({Color color}) {
   return LinearGradient(
     begin: Alignment.topRight,
     end: Alignment.bottomLeft,
-    stops: const <double>[0.1, 0.4, 0.7, 0.9],
+    stops: const <double>[0.1, 0.6, 0.8, 0.9],
     colors: <Color>[
       _color.withOpacity(1),
-      _color.withOpacity(0.97),
       _color.withOpacity(0.90),
-      _color.withOpacity(0.86),
+      _color.withOpacity(0.85),
+      _color.withOpacity(0.76),
     ],
   );
 }

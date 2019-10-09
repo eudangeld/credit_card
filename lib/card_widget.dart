@@ -3,6 +3,7 @@ import 'package:credit_card/style/styles.dart';
 import 'package:credit_card/widget/animation_card.dart';
 import 'package:credit_card/widget/back_card.dart';
 import 'package:credit_card/widget/front_card.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'model/card_model.dart';
 
@@ -60,15 +61,19 @@ class _CreditCardState extends State<CreditCard>
       controller.reverse();
     }
 
-    return Stack(
+    return Column(
       children: <Widget>[
-        AnimationCard(
-          animation: _frontRotation,
-          child: FrontCard(model: widget.cardModel),
-        ),
-        AnimationCard(
-          animation: _backRotation,
-          child: BackCard(model: widget.cardModel),
+        Stack(
+          children: <Widget>[
+            AnimationCard(
+              animation: _frontRotation,
+              child: FrontCard(model: widget.cardModel),
+            ),
+            AnimationCard(
+              animation: _backRotation,
+              child: BackCard(model: widget.cardModel),
+            ),
+          ],
         ),
       ],
     );

@@ -46,39 +46,31 @@ class _BackCardState extends State<BackCard> {
             ),
           ),
           Expanded(
-            flex: 2,
-            child: Container(
-              margin: const EdgeInsets.only(top: 16),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Expanded(
-                    flex: 9,
-                    child: Container(
-                      height: 48,
-                      color: Colors.white70,
-                    ),
-                  ),
-                  Expanded(
-                    flex: 3,
-                    child: Container(
-                      color: Colors.white,
-                      child: Padding(
-                        padding: const EdgeInsets.all(5),
-                        child: Text(
-                          widget.model.cvvController.text.isEmpty
-                              ? 'XXX'
-                              : widget.model.cvvController.text,
-                          maxLines: 1,
-                          style: textStyle(widget.model.backTextStyle),
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
+              flex: 2,
+              child: Container(
+                  margin: const EdgeInsets.only(top: 16),
+                  child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Expanded(
+                            flex: 9,
+                            child:
+                                Container(height: 48, color: Colors.white70)),
+                        Expanded(
+                            flex: 3,
+                            child: Container(
+                                color: Colors.white,
+                                child: Padding(
+                                    padding: const EdgeInsets.all(5),
+                                    child: Text(
+                                        widget.model.cvvController.text.isEmpty
+                                            ? 'XXX'
+                                            : widget.model.cvvController.text,
+                                        maxLines: 1,
+                                        style: widget.model.cvvTextStyle != null
+                                            ? widget.model.cvvTextStyle
+                                            : cvvTextStyle))))
+                      ]))),
           Expanded(
             flex: 2,
             child: Align(

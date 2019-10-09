@@ -1,0 +1,31 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="124.98" height="102.97" viewBox="0 0 124.98 102.97">
+  <defs>
+    <linearGradient id="çÓ_È_Ó·_ÁÂ_ËÂÌÚ_151" data-name="çÓ‚˚È Ó·‡ÁÂˆ „‡‰ËÂÌÚ‡ 151" x1="10.2" y1="-0.8" x2="114.78" y2="103.77" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c49454"/>
+      <stop offset="0.1" stop-color="#c79a5a"/>
+      <stop offset="0.24" stop-color="#cfab6a"/>
+      <stop offset="0.4" stop-color="#ddc685"/>
+      <stop offset="0.57" stop-color="#f0ecab"/>
+      <stop offset="0.6" stop-color="#f3f2b1"/>
+      <stop offset="0.67" stop-color="#ede7a6"/>
+      <stop offset="0.79" stop-color="#dfc989"/>
+      <stop offset="0.95" stop-color="#c79a5a"/>
+      <stop offset="0.97" stop-color="#c49454"/>
+    </linearGradient>
+  </defs>
+  <title>mcard</title>
+  <rect width="124.98" height="102.97" rx="16" style="fill: url(#çÓ_È_Ó·_ÁÂ_ËÂÌÚ_151)"/>
+  <path d="M171.65,210.79H134.86V174h36.79Zm-35-1.75H169.9V175.75H136.61Z" transform="translate(-86.34 -138.99)" style="fill: #8c7336"/>
+  <rect x="168.04" y="167.39" width="18.71" height="1.75" transform="translate(-153.36 35.72) rotate(-45)" style="fill: #8c7336"/>
+  <rect x="97.67" y="21.78" width="27.31" height="1.75" style="fill: #8c7336"/>
+  <rect x="84.44" y="46.07" width="40.55" height="1.75" style="fill: #8c7336"/>
+  <rect x="176.65" y="207.12" width="1.75" height="19.08" transform="translate(-187.55 50) rotate(-45)" style="fill: #8c7336"/>
+  <rect x="97.93" y="83.54" width="27.05" height="1.75" style="fill: #8c7336"/>
+  <rect x="128.25" y="158.9" width="1.75" height="18.71" transform="translate(-167.5 1.6) rotate(-45)" style="fill: #8c7336"/>
+  <rect y="21.78" width="36.17" height="1.75" style="fill: #8c7336"/>
+  <rect y="46.07" width="49.4" height="1.75" style="fill: #8c7336"/>
+  <rect x="119.45" y="215.79" width="19.08" height="1.75" transform="translate(-201.76 15.68) rotate(-45)" style="fill: #8c7336"/>
+  <rect y="83.54" width="35.91" height="1.75" style="fill: #8c7336"/>
+  <rect x="66.04" y="70.92" width="1.75" height="32.04" style="fill: #8c7336"/>
+  <rect x="66.04" width="1.75" height="35.89" style="fill: #8c7336"/>
+</svg>

@@ -8,33 +8,50 @@ Size size(BuildContext context) => MediaQuery.of(context).size;
 Orientation orientation(BuildContext context) =>
     MediaQuery.of(context).orientation;
 
+bool flagReturned = false;
+Widget flag = Container();
+
 Future<Widget> getCardBin(String cardNumber) async {
-  if (cardNumber.length >= 6) {
+  if (cardNumber.length < 6) {
+    flagReturned = false;
+    flag = Container();
+  }
+
+  if (cardNumber.length == 7 && !flagReturned) {
     try {
       final dynamic result = await http.read('https://binlist.io/lookup/' +
           cardNumber.replaceAll(RegExp(r'\s+\b|\b\s'), ''));
 
       if (flags[jsonDecode(result)['scheme']] != null) {
-        return flags[jsonDecode(result)['scheme']];
+        flag = flags[jsonDecode(result)['scheme']];
+        flagReturned = true;
       } else {
-        return Container();
+        flag = Container();
       }
     } catch (e) {}
-  } else {
-    return Container();
   }
-
-  return Container();
+  return flag;
 }
 
+double _flagWidth = 50;
+
 Map<String, dynamic> flags = <String, dynamic>{
-  'MASTERCARD': SvgPicture.asset('packages/credit_card/assets/master.svg'),
-  'VISA': SvgPicture.asset('packages/credit_card/assets/visa.svg'),
-  'ELO': SvgPicture.asset('packages/credit_card/assets/elo.svg'),
-  'JCB': SvgPicture.asset('packages/credit_card/assets/jcb.svg'),
-  'DISCOVER': SvgPicture.asset('packages/credit_card/assets/discover.svg'),
-  'DINERS CLUB': SvgPicture.asset('packages/credit_card/assets/diners.svg'),
-  'aura': SvgPicture.asset('packages/credit_card/assets/aura.svg'),
-  'AMERICAN EXPRESS': SvgPicture.asset('packages/credit_card/assets/amex.svg'),
-  'HIPERCARD': SvgPicture.asset('packages/credit_card/assets/hipercard'),
+  'MASTERCARD': SvgPicture.asset('packages/credit_card/assets/master.svg',
+      width: _flagWidth),
+  'VISA': SvgPicture.asset('packages/credit_card/assets/visa.svg',
+      width: _flagWidth),
+  'ELO': SvgPicture.asset('packages/credit_card/assets/elo.svg',
+      width: _flagWidth),
+  'JCB': SvgPicture.asset('packages/credit_card/assets/jcb.svg',
+      width: _flagWidth),
+  'DISCOVER': SvgPicture.asset('packages/credit_card/assets/discover.svg',
+      width: _flagWidth),
+  'DINERS CLUB': SvgPicture.asset('packages/credit_card/assets/diners.svg',
+      width: _flagWidth),
+  'aura': SvgPicture.asset('packages/credit_card/assets/aura.svg',
+      width: _flagWidth),
+  'AMERICAN EXPRESS': SvgPicture.asset('packages/credit_card/assets/amex.svg',
+      width: _flagWidth),
+  'HIPERCARD': SvgPicture.asset('packages/credit_card/assets/hipercard',
+      width: _flagWidth)
 };

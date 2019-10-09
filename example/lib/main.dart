@@ -51,6 +51,7 @@ class MySampleState extends State<MySample> {
                 cardModel: cardModel,
                 showBackView: cvvFocus.hasFocus,
               ),
+
               //USE YOUR OWN TEXTFIELDS
               Expanded(child: numberField),
               Expanded(child: nameField),
