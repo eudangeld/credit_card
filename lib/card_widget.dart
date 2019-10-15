@@ -31,18 +31,20 @@ class _CreditCardState extends State<CreditCard>
   String numberString;
   bool isAmex = false;
 
-  @override
-  void dispose() {
-    controller.dispose();
-    widget.cardModel.controllers.forEach((f) => f.dispose());
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   controller.dispose();
+  //   widget.cardModel.controllers.forEach((f) => f.dispose());
+  //   super.dispose();
+  // }
 
   @override
   void initState() {
     super.initState();
-    widget.cardModel.controllers
-        .forEach((f) => f.addListener(() => setState(() {})));
+    if (mounted) {
+      widget.cardModel.controllers
+          .forEach((f) => f.addListener(() => setState(() {})));
+    }
 
     controller = animationController(
       duration: widget.cardModel.animeDuration,
