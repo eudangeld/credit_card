@@ -31,7 +31,7 @@ class _BackCardState extends State<BackCard> {
       width: widget.model.width ?? size(context).width,
       height: widget.model.height ??
           (orientation(context) == Orientation.portrait
-              ? size(context).height / 4
+              ? size(context).height / 3.3
               : size(context).height / 2),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

@@ -23,10 +23,10 @@ class _FrontCardState extends State<FrontCard> {
     final double _cardWidth = widget.model.width ?? size(context).width;
     final double _cardHeight = widget.model.height ??
         (orientation(context) == Orientation.portrait
-            ? size(context).height / 4
+            ? size(context).height / 3.3
             : size(context).height / 2);
 
-    final double _numberCardHeight = _cardHeight / 1.9;
+    final double _numberCardHeight = _cardHeight / 2.2;
     final double _chipTopPadding = _numberCardHeight - _cardHeight / 3;
     const double _holderBottomPadding = 20;
     final double _expiryBttonPadding = _numberCardHeight + 37;
