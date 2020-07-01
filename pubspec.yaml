@@ -1,6 +1,6 @@
 name: credit_card
 description: A Credit Card with card flip animation
-version: 0.0.1
+version: 0.0.3
 author: eudangeld@gmail.com
 homepage: https://github.com/eudangeld/credit_card
 issue_tracker : https://github.com/eudangeld/credit_card/issues
@@ -15,7 +15,7 @@ dependencies:
     sdk: flutter
   flutter_masked_text: ^0.8.0  
   http: ^0.12.0+2
-  flutter_svg: 0.14.1
+  flutter_svg: 0.17.4
 
 
 dev_dependencies:
